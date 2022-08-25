@@ -6,7 +6,7 @@
 function copyClipboard(element) {
     var $bridge = $("<input>")
     $("body").append($bridge);
-    $bridge.val($(element).text()).select();
+    $bridge.val($(element).text().trim()).select();
     document.execCommand("copy");
     $bridge.remove();
     
